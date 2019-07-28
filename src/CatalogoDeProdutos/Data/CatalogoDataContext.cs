@@ -9,13 +9,7 @@ namespace CatalogoDeProdutos.Data
         public DbSet<Categoria> Categorias {get;set;}
 
         public DbSet<Produto> Produtos {get;set;}
-
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-          optionsBuilder.UseSqlServer(@"Data Source=.\\SQLEXPRESS;Initial Catalog=CatalogoDB;Integrated Security=True");
-        }
-
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new ProdutoMap());
