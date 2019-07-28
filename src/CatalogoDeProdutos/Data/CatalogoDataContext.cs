@@ -1,3 +1,4 @@
+using CatalogoDeProdutos.Data.Maps;
 using CatalogoDeProdutos.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,9 +18,8 @@ namespace CatalogoDeProdutos.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-           builder.ApplyConfiguration(new ProdutoMap());
-           builder.ApplyConfiguration(new CategoriaMap());
-
+            builder.ApplyConfiguration(new ProdutoMap());
+            builder.ApplyConfiguration(new CategoriaMap());
         }
     }
 }
